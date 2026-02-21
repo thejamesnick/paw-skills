@@ -11,7 +11,7 @@ npx skills add @pocketagent/paw-skills
 Or install from GitHub:
 
 ```bash
-npx skills add pocketagent/paw-skills
+npx skills add thejamesnick/paw-skills
 ```
 
 ## What's Included
@@ -66,4 +66,4 @@ MIT
 
 - [PocketAgent Wallet](https://github.com/pocketagent/paw)
 - [Skills Registry](https://skills.sh)
-- [Report Issues](https://github.com/pocketagent/paw-skills/issues)
+- [Report Issues](https://github.com/thejamesnick/paw-skills/issues)
