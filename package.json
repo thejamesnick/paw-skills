@@ -1,0 +1,30 @@
+{
+  "name": "@pocketagent/paw-skills",
+  "version": "1.0.3",
+  "description": "AI Agent Skills for PocketAgent Wallet (PAW) - Lightning-fast autonomous wallet for Solana",
+  "keywords": [
+    "ai",
+    "agent",
+    "skills",
+    "solana",
+    "wallet",
+    "crypto",
+    "blockchain",
+    "defi",
+    "trading",
+    "jupiter",
+    "dex",
+    "autonomous",
+    "pocketagent",
+    "paw"
+  ],
+  "author": "PocketAgent Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thejamesnick/paw-skills.git"
+  },
+  "files": [
+    "skills/**/*"
+  ]
+}
