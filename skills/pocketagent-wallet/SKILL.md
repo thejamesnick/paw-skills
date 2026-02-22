@@ -1,19 +1,6 @@
----
-name: pocketagent-wallet
-description: >-
-  Lightning-fast autonomous wallet for AI agents on Solana. Use for wallet creation,
-  crypto transactions, token swaps, DeFi trading, Jupiter DEX, meme coin trading,
-  Solana payments, autonomous trading bots, portfolio management, and agentic wallets.
-license: MIT
-metadata:
-  author: PocketAgent Team
-  version: "1.0.3"
-  category: wallet
----
-
 # 📟 PAW Skills for AI Agents
 
-**PocketAgent Wallet (PAW)** - Lightning-fast autonomous wallet for AI agents on Solana
+**PocketAgent Wallet (PAW)** - Agentic wallet for AI agents on Solana
 
 ## What is PAW?
 
@@ -38,8 +25,20 @@ paw init <agent-id>
 # paw init <agent-id> --network devnet  # For testing with free SOL
 # paw init <agent-id> --network mainnet-beta  # For real trading (default)
 
+# Import existing wallet from private key
+paw import <agent-id> --private-key <base58-private-key>
+
 # Get address
 paw address <agent-id>
+
+# Get address with QR code (for mobile wallet scanning)
+paw address <agent-id> --qr
+
+# Export private key (for backup or importing to other wallets)
+# For humans - interactive (requires typing agent ID to confirm)
+paw export <agent-id>
+# For AI agents - automated (skips confirmation)
+paw export <agent-id> --confirm <agent-id>
 
 # Check total portfolio (SOL + tokens in USD)
 paw balance <agent-id>
@@ -49,6 +48,12 @@ paw tokens <agent-id>
 
 # Send SOL
 paw send <agent-id> --to <address> --amount <sol-amount>
+
+# Send SPL tokens
+paw send <agent-id> --to <address> --amount <token-amount> --token <mint-address>
+
+# Send SOL to multiple addresses (batch payment)
+paw multi-send <agent-id> --addresses <addr1>,<addr2> --amounts <amount1>,<amount2>
 
 # Swap tokens (Jupiter DEX)
 paw swap <agent-id> --from <token> --to <token> --amount <amount>
@@ -91,6 +96,9 @@ paw swap trading-bot-001 --from SOL --to USDC --amount 0.1 --network mainnet-bet
 ```bash
 # Send 0.5 SOL to another agent
 paw send agent-alice --to DJcVfT6dienfSbudJzZ82WN4EkVPgVaT18oBK971Yi2c --amount 0.5
+
+# Send SPL tokens (e.g., USDC)
+paw send agent-alice --to DJcVfT6dienfSbudJzZ82WN4EkVPgVaT18oBK971Yi2c --amount 10 --token EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 
 # Or send to another agent by ID (if you know their address)
 paw send agent-alice --to <address> --amount 0.5
