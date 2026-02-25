@@ -1,6 +1,6 @@
 {
   "name": "@pocketagent/paw-skills",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "AI Agent Skills for PocketAgent Wallet (PAW) - wallet for Agentic AI on Solana",
   "keywords": [
     "ai",
